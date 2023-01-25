@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-void menu(){
+void affichMenu(){
     cout<<"==================================="<<endl;
     cout<<"************PICSOU BANK************\n";
     cout<<"==================================="<<endl;
@@ -16,7 +16,12 @@ void menu(){
     cout<<"    3. Deposit"<<endl;
 }
 
-
+void list(){
+        cout<<"Please choose an option from the list :"<<endl;
+        cout<<"    1. Check Balance"<<endl;
+        cout<<"    2. Withdraw"<<endl;
+        cout<<"    3. Deposit"<<endl;
+}
 
 
 int main(){
@@ -29,7 +34,7 @@ bool continuer,opValid;
 
 
 do {
-menu();
+affichMenu();
 
 do{
 
@@ -44,12 +49,15 @@ switch(option){
     case 2 : //add confirmation?
         cout<<"Type the amount to withdraw : "<<endl;
         cin>>montant;
+        
         if(solde-montant>=0){
         solde-=montant;
         cout<<"Balance after transaction : "<<solde<<endl;}
         else{cout<<"Insufficient funds"<<endl;break;}
+
         opValid=true;
         break;
+
     case 3 : //add confirmation?, check if <0?
         opValid=true;
         cout<<"Type the amount to deposit : "<<endl;
@@ -59,10 +67,7 @@ switch(option){
         break;
 
     default :
-        cout<<"Please choose an option from the list :"<<endl;
-        cout<<"    1. Check Balance"<<endl;
-        cout<<"    2. Withdraw"<<endl;
-        cout<<"    3. Deposit"<<endl;
+        list();
         opValid=false;
 }
 }while(!opValid);
@@ -71,8 +76,8 @@ cout<<"Would you like to complete another transaction (y/n)"<<endl;
 cin>>rep;
 if (rep=="n"){continuer=false;}
 else{continuer=true;}
-}
-while(continuer);
+
+}while(continuer);
 
 
 return 0;
