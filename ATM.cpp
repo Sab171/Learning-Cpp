@@ -32,6 +32,7 @@ do {
 menu();
 
 do{
+
 cin>>option;
 
 switch(option){
@@ -44,9 +45,9 @@ switch(option){
         cout<<"Type the amount to withdraw : "<<endl;
         cin>>montant;
         if(solde-montant>=0){
-        cout<<"Balance after transaction : "<<solde<<endl;
-        solde-=montant;}
-        else{cout<<"Insufficient funds"<<endl;break;
+        solde-=montant;
+        cout<<"Balance after transaction : "<<solde<<endl;}
+        else{cout<<"Insufficient funds"<<endl;break;}
         opValid=true;
         break;
     case 3 : //add confirmation?, check if <0?
@@ -72,21 +73,6 @@ if (rep=="n"){continuer=false;}
 else{continuer=true;}
 }
 while(continuer);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 return 0;
