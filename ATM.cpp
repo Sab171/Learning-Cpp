@@ -10,6 +10,10 @@ void menu(){
     cout<<"==================================="<<endl;
     cout<<"************PICSOU BANK************\n";
     cout<<"==================================="<<endl;
+    cout<<"Please select an option :\n"<<endl;
+    cout<<"    1. Check Balance"<<endl;
+    cout<<"    2. Withdraw"<<endl;
+    cout<<"    3. Deposit"<<endl;
 }
 
 
@@ -48,7 +52,7 @@ menu();
 
 
 
-
+return 0;
 
 }
 
