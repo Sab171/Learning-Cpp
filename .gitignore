@@ -1,2 +1,5 @@
 .vscode/settings.json
 calc.exe
+.vscode/tasks.json
+ATM.exe
+calculatrice.exe
