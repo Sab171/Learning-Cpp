@@ -53,7 +53,7 @@ switch(option){
         if(solde-montant>=0){
         solde-=montant;
         cout<<"Balance after transaction : "<<solde<<endl;}
-        else{cout<<"Insufficient funds"<<endl;break;}
+        else{cout<<"Insufficient funds"<<endl;}
 
         opValid=true;
         break;
